@@ -1,0 +1,18 @@
+extends layout
+block content
+	.container-fluid
+		div(class="row-fluid")
+			div(class="span12")
+				form(method="post",action="/AddEntryPost", class="form-horizontal")
+					.control-group
+						label(for="title",class="control-label") Title
+						.controls
+							input(type="Text",id="title",name="title",class="span12",placeholder="Enter title",autofocus="autofocus")
+					.control-group
+						label(for="entry",class="control-label") Entry
+						.controls
+							textarea(id="entry",name="entry",rows="15",cols="50",class="span12",placeholder="Your entry here")
+					.control-group
+						.controls
+							button(type="submit",class="btn btn-primary") Submit Entry
+		

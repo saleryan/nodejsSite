@@ -1,0 +1,27 @@
+extends layout
+block content
+	.container-fluid
+		div(class="row-fluid")
+			- if (posts) {
+				div(class="span12 scrollbar")
+					each post in posts
+						h4.alert
+							span #{post.title}
+						p 
+							div(contentEditable="contentEditable")
+								!{post.entry}
+						hr
+				div(style="width:200px;margin:0 auto;")
+					div(style="float:left")
+						- if (page> 0) {
+						a(href='/index?page='+(parseInt(page)-1)) previous
+						- }
+					div(style="float:right")
+						- if (page<lastPage-1) {
+						a(href='/index?page='+(parseInt(page)+1)) next
+						- }
+			-} else {
+			p.alert	You have no blog postings.
+
+			-}
+						

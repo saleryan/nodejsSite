@@ -1,0 +1,25 @@
+extends loginLayout
+block content
+	h1 New User
+	- if (error && error.message)
+		p(class="alert alert-error") #{error.message}
+	form(method="POST", action="/create")
+		p
+		label(for="username") Username<br />
+		input#username(type="text",name="username",class="input-block-level",required=true,autofocus="autofocus")
+		p
+		label(for="name") Name<br />
+		input#name(type="text",name="name",class="input-block-level",required=true)
+		p
+		label(for="email") Email<br />
+		input#email(type="email",name="email",class="input-block-level",required=true)
+		p
+		label(for="password") Password<br />
+		input#password(type="password", name="password",class="input-block-level",required=true)
+		p
+		label(for="bio") Bio<br />
+		textarea#bio(name="bio",class="input-block-level")
+		p
+		input(type="submit", value="Create",class="btn btn-primary")
+		&nbsp;
+		a(href="/login",class="btn btn-primary") Cancel

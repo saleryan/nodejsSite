@@ -1,0 +1,66 @@
+body
+{
+    margin-top:10px;
+}
+.rounded-corner-border
+{
+    border-radius:5px;
+    border:1px solid lightgray;
+    height:450px;
+    padding:5px;
+    box-sizing:border-box;
+    /*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);*/
+  
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.scrollbar {
+height: 400px;
+
+overflow-y: scroll;
+}
+
+.form-signin {
+max-width: 300px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: #fff;
+border: 1px solid #e5e5e5;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.form-signin + .footer
+{
+    max-width: 300px;
+
+margin: 0 auto 20px;
+  
+}
+
+
+.form-signin div, div:target ~ #default  {
+  display: none;
+}
+.form-signin #default, div:target {
+  display: block;
+}
+
+.

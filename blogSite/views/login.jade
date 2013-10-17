@@ -1,0 +1,27 @@
+extends loginLayout
+block content
+	.form-signin
+		ul(class="nav nav-tabs")
+			li
+				a(href="#default") Sign In
+			li 
+				a(href="#tab2") Register
+			li 
+				a(href="#tab3") Forgot Password
+		#tab2
+			h2 New User?
+			h3 
+				a(href="/signup") Sign up
+		#tab3
+			form(method="post",action="/forgotpassword")
+				input(type="text",name="username",placeholder="User name",class="input-block-level",autofocus="autofocus") 
+				button(type="submit",class="btn btn-primary") Forgot Password
+		#default
+			- if (error && error.message)
+				p(class="alert alert-error") #{error.message}
+			h2 Please Sign in
+				form(method="post",action="/login")
+					input(type="text",name="username",placeholder="User name",class="input-block-level",autofocus="autofocus") 
+					input(type="password", name="password",placeholder="Password", class="input-block-level")
+					button(type="submit",class="btn btn-primary") Sign in 
+				
