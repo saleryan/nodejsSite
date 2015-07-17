@@ -21,7 +21,7 @@ exports.forgotPassword = function (req, res,next) {
                     service: "Gmail",
                     auth: {
                         user: "saleryan@gmail.com",
-                        pass: "Hardwar3"
+                        pass: ""
                     }
                 });
 
